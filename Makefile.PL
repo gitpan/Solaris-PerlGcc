@@ -1,7 +1,7 @@
 #
-# ident	"@(#)Makefile.PL	1.1	02/11/08 SMI"
+# ident	"@(#)Makefile.PL	1.2	03/05/13 SMI"
 #
-# Copyright 2002 Sun Microsystems, Inc.  All rights reserved.
+# Copyright 2002-2003 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
 
@@ -13,7 +13,7 @@ use POSIX qw(uname);
 # Check we are on the correct OS and version, and running the Solaris perl.
 my ($os, $host, $rel, $ver, $arch) = uname();
 my $hw = $arch;
-$hw = 'x86' if ($hw eq 'i386');
+$hw = 'x86' if ($hw eq 'i86pc');
 $hw = 'sparc' if ($hw =~ /^sun4/);
 my $exe = qx{/bin/ksh -pc "whence $^X"};
 chomp($exe);

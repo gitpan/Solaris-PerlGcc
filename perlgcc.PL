@@ -1,7 +1,7 @@
 #
-# ident	"@(#)perlgcc.PL	1.2	03/01/19 SMI"
+# ident	"@(#)perlgcc.PL	1.3	03/05/13 SMI"
 #
-# Copyright 2002 Sun Microsystems, Inc.  All rights reserved.
+# Copyright 2002-2003 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
 
@@ -9,7 +9,7 @@ BEGIN { $^W = 1; };
 use strict;
 use Config;
 use vars qw{$VERSION};
-$VERSION = "1.2";
+$VERSION = "1.3";
 
 my $fh = do { local *FH; *FH; };
 open($fh, ">$ARGV[0]") || die("Can't open perlgcc: $!\n");
@@ -22,9 +22,9 @@ if ($] == 5.00503) {
 print $fh <<EOF;
 $startperl
 #
-# ident	"@(#)$ARGV[0]	1.2	03/01/19 SMI"
+# ident	"@(#)$ARGV[0]	1.3	03/05/13 SMI"
 #
-# Copyright 2002 Sun Microsystems, Inc.  All rights reserved.
+# Copyright 2002-2003 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
 
@@ -32,7 +32,7 @@ require 5.00503;
 BEGIN { \$^W = 1; };
 use strict;
 use vars qw{\$VERSION};
-\$VERSION = '1.2';
+\$VERSION = '1.3';
 
 if (exists(\$ENV{PERL5LIB})) {
 	\$ENV{PERL5LIB} =
@@ -49,16 +49,16 @@ EOF
 print $fh <<EOF;
 $startperl
 #
-# ident	"@(#)$ARGV[0]	1.2	03/01/19 SMI"
+# ident	"@(#)$ARGV[0]	1.3	03/05/13 SMI"
 #
-# Copyright 2002 Sun Microsystems, Inc.  All rights reserved.
+# Copyright 2002-2003 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
 
 use 5.6.1;
 use strict;
 use warnings;
-our \$VERSION = '1.2';
+our \$VERSION = '1.3';
 
 if (exists(\$ENV{PERL5LIB})) {
 	\$ENV{PERL5LIB} =
