@@ -5,7 +5,7 @@ perlgcc - Compile perl modules using gcc.
 
 The perl 5.005_03 and 5.6.1 shipped with Solaris 8, 9 and 10 were built with
 the Forte compilers, and therefore assume that any add-on modules will also be
-built with the Forte compiler.  The C<perlcc> command will allow gcc to be used
+built with the Forte compiler.  The C<perlgcc> command will allow gcc to be used
 to compile add-on modules for use with the perl versions shipped with Solaris.
 
 INSTALLATION
