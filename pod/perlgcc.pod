@@ -1,0 +1,55 @@
+#
+# ident	"@(#)perlgcc.pod	1.1	02/11/07 SMI"
+#
+# Copyright 2002 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+
+=head1 NAME
+
+perlgcc - Compile perl modules using gcc.
+
+=head1 SYNOPSIS
+
+ perlgcc Makefile.PL; make
+
+=head1 DESCRIPTION
+
+When perl is built it saves the name of the compiler and any compiler flags
+in its configuration files, and then uses these saved settings when any
+additional modules are built.  The perl 5.005_03 and perl 5.6.1 shipped with
+Solaris 8, 9 and 10 were built with the Forte compilers rather than gcc.
+
+If add-on modules are built with the Forte compilers, everyting works as
+expected.  However, if gcc is used to build add-on modules, the saved
+configuration is incorrect as it assumes that the Forte compiler will be
+present.
+
+This command provides a set of perl configuration files that are configured to
+use gcc as the compiler rather than the Forte compiler.  The default
+configuration files are not modified, instead a replacement set of files are
+transparently substituted for the duration of the perlgcc command.
+
+Instead of invoking C<perl Makefile.PL> to generate the makefile needed
+to compile a module, C<perlgcc Makefile.PL> should be used instead.
+All command-line arguments to perlgcc are passed unmodified to
+C</usr/perl5/5.6.1/bin/perl>.
+
+If you use the CPAN.pm module, instead of invoking C<perl -MCPAN -e shell>,
+you should use C<perlgcc -MCPAN -e shell> instead, and use as normal.
+
+=head1 ENVIRONMENT VARIABLES
+
+PERL5LIB
+
+This is modified to point to the location of the replacement perl configuration
+files.
+
+=head1 LICENSING
+
+This module is released under the perl Artistic license, see the file LICENSE
+in the distrubution tarball.
+
+=head1 SEE ALSO
+
+C<perl(1)>, C<perlrun(1)>.

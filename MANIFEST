@@ -1,0 +1,17 @@
+Changes
+config/5.00503/5.8/sparc/Config.pm
+config/5.00503/5.8/x86/Config.pm
+config/5.00503/5.9/sparc/Config.pm
+config/5.00503/5.9/x86/Config.pm
+config/5.00503/MakeMaker.pm
+config/5.006001/5.10/sparc/Config.pm
+config/5.006001/5.10/x86/Config.pm
+config/5.006001/5.9/sparc/Config.pm
+config/5.006001/5.9/x86/Config.pm
+config/5.006001/MakeMaker.pm
+LICENSE
+MANIFEST
+perlgcc.PL
+pod/perlgcc.pod
+Makefile.PL
+README
